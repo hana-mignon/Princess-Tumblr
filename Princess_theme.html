@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html lang="{block:Japanese}ja{/block:Japanese}{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt-br{/block:Portuguese}{block:Portuguese}pt-pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}{block:Korean}kr{/block:Korean}">
-<!-- "Princess" - Version 1.0.0 - Tumblr Themes. The MIT License. (c) hana. https://github.com/hana-mignon -->
+<!-- "Princess" - Version 1.0.1 - Tumblr Themes. The MIT License. (c) hana. https://github.com/hana-mignon -->
      <head>
         　<meta charset="utf-8">
         　{block:Ifkeywords}
@@ -302,11 +302,12 @@
                               <div class="{select:Home Article Size} reveal" id="articleModal{PostId}" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
                                   {block:IfPermalinkPage}
                                         <a href="{Permalink}" data-tooltip aria-haspopup="true" class="has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{lang:Permalink}">
-                                　{/block:IfPermalinkPage}
-                                  　　　　　{TimeAgo}
-                                  {block:IfPermalinkPage}
-                                        </a><!-- has-tip border-bottom-none -end -->　　
-                                  {/block:IfPermalinkPage}
+                                          {TimeAgo}
+                                        </a><!-- has-tip border-bottom-none -end -->　　 
+                                  {/block:IfPermalinkPage}      
+                                  {block:IfNotPermalinkPage}
+                                        {TimeAgo}
+                                  {/block:IfNotPermalinkPage}
                         {/block:HomePage}
                                              
                         <div class="card article">
