@@ -1,0 +1,1296 @@
+<!DOCTYPE>
+<html lang="{block:Japanese}ja{/block:Japanese}{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt-br{/block:Portuguese}{block:Portuguese}pt-pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}{block:Korean}kr{/block:Korean}">
+<!-- "Princess" - Version 1.0.0 - Tumblr Themes. The MIT License. (c) hana. https://github.com/hana-mignon -->
+     <head>
+        　<meta charset="utf-8">
+        　{block:Ifkeywords}
+                <meta name="keywords" content="{text:keywords}" />
+          {/block:Ifkeywords}
+        　<meta name="viewport" content="width=device-width, initial-scale=1" />
+        　<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+        　<title>{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:TagPage}{lang:TagResultCount posts tagged Tag} | {/block:TagPage}{block:SearchPage}{lang:SearchResultCount results for SearchQuery} | {/block:SearchPage}{Title}</title>
+          <link href="{Favicon}" rel="shortcut icon">
+  　　　   　{block:ShowDescription}       
+                {block:Description}
+                      <meta name="description" content="{MetaDescription}" />
+                {/block:Description}
+          {/block:ShowDescription} 
+            
+          {block:IfOgp}
+                <meta property="og:title" content="{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:TagPage}{lang:TagResultCount posts tagged Tag} | {/block:TagPage}{block:SearchPage}{lang:SearchResultCount results for SearchQuery} | {/block:SearchPage}{block:DayPage}{block:IfDateYyMmDd}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}{/block:IfDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfDateDdMmYy}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:IfDateDdMmYy}{/block:IfNotDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfNotDateDdMmYy}{MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}{/block:IfNotDateDdMmYy}{/block:IfNotDateYyMmDd} | {/block:DayPage}{Title}" />
+                <meta property="og:type" content="{block:IndexPage}blog{/block:IndexPage}{block:PermalinkPage}article{/block:PermalinkPage}" />
+                <meta property="og:url" content="{block:IndexPage}{BlogURL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+                <meta property="og:image" content="{image:Og Image}" />
+                <meta property="og:site_name" content="{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:TagPage}{lang:TagResultCount posts tagged Tag} | {/block:TagPage}{block:SearchPage}{lang:SearchResultCount results for SearchQuery} | {/block:SearchPage}{block:DayPage}{block:IfDateYyMmDd}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}{/block:IfDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfDateDdMmYy}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:IfDateDdMmYy}{/block:IfNotDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfNotDateDdMmYy}{MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}{/block:IfNotDateDdMmYy}{/block:IfNotDateYyMmDd} | {/block:DayPage}{Title}" />
+                <meta property="og:description" content="{MetaDescription}" />
+                {block:IfTweets}
+                      <meta name="twitter:card" content="Summary" />
+                      <meta name="twitter:title" content="{block:PostSummary}{PostSummary} | {/block:PostSummary}{block:TagPage}{lang:TagResultCount posts tagged Tag} | {/block:TagPage}{block:SearchPage}{lang:SearchResultCount results for SearchQuery} | {/block:SearchPage}{block:DayPage}{block:IfDateYyMmDd}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}{/block:IfDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfDateDdMmYy}{DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}{/block:IfDateDdMmYy}{/block:IfNotDateYyMmDd}{block:IfNotDateYyMmDd}{block:IfNotDateDdMmYy}{MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}{/block:IfNotDateDdMmYy}{/block:IfNotDateYyMmDd} | {/block:DayPage}{Title}" />
+                      {block:Twitter}
+                            <meta name="twitter:site" content="@{TwitterUsername}" />
+                      {/block:Twitter}
+                      <meta name="twitter:image" content="{image:Og Image}" />
+                {/block:IfTweets}
+          {/block:IfOgp}
+            
+        　<link rel="apple-touch-icon" href="{PortraitURL-128}" />
+          <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+          {block:None}
+                <meta name="image:Og Image" content="" />
+                <meta name="image:Slide Image 1" content="" />
+                <meta name="image:Slide Image 2" content="" />
+                <meta name="image:Slide Image 3" content="" />
+                <meta name="text:keywords" content="Tumblr,Princess" />
+                <meta name='text:Tweets Limit' content='30' />
+                <meta name="text:Home Page Height" content='min-height:150vh;' /> 
+                <meta name='text:Disqus Shortname' content='' />
+                <meta name="text:Google Analytics ID" content='' />
+                <meta name="text:Description Name Position" content='40px' />
+                <meta name="text:Home Free Area" content='' />
+                <meta name="text:Article Free Area" content='' />
+                <meta name="text:Slide Image 1 Caption" content="" />
+                <meta name="text:Slide Image 2 Caption" content="" />
+                <meta name="text:Slide Image 3 Caption" content="" />
+                <meta name="if:keywords" content="0" />
+                <meta name="if:Ogp" content="0" /> 
+                <meta name="if:Navigation" content="1" />
+                <meta name="if:Search" content="1" />
+                <meta name="if:Pages" content="1" />
+                <meta name="if:Liked Posts" content="0" />
+                <meta name="if:Tweets" content="0" />
+                <meta name='if:Group Members' content='0' />
+                <meta name='if:Following' content='0' />
+                <meta name="if:Date YyMmDd" content="0" />
+                <meta name="if:Date DdMmYy" content="0" />
+                <meta name="if:Home Date Cover" content="0" />
+                <meta name="if:Home PagiNation" content="1" />
+                <meta name="if:Permalink Page" content="1" />
+                <meta name="if:Slide Image" content="0" />
+                <meta name="if:Slide Image Caption" content="0" />
+                <meta name="if:Disqus Comment" content="0" />
+                <meta name="select:Home Article Size" content="small" title="Small" />
+                <meta name="select:Home Article Size" content="large" title="Large" />
+                <meta name="select:Home Article Size" content="full" title="Full" />
+          {/block:None}
+          <link rel="stylesheet" href="https://static.tumblr.com/smfekjv/0LHoutyj4/foundation.min.css">
+          <link rel="stylesheet" href="https://static.tumblr.com/smfekjv/f2mouv4s0/princess.css">
+          {block:HomePage}
+        　       {block:IfLikedPosts}
+                      <link rel="stylesheet" href="https://static.tumblr.com/smfekjv/p98outr66/princess_like.css">     
+                {/block:IfLikedPosts}
+          {/block:HomePage}
+        　<style>
+                h1 a{
+                    color:{TitleColor};}
+                     
+                {block:HomePage}
+                      .homepage-height{
+                          {text:Home Page Height}}
+                      .header{
+                          margin-bottom:1rem;
+                          padding-top:2rem;
+                          height:50vh;
+                          background-color:{AccentColor};}  
+                      h1 a{
+                          text-shadow:#ffffff 2px 2px 4px;}
+                      h1 a:active{
+                          text-shadow:{TitleColor} 2px 2px 4px;}
+                            
+                      {block:ShowHeaderImage}
+                            .header-image{
+                                background:url("{HeaderImage}") center center / cover no-repeat;}
+                      {/block:ShowHeaderImage}
+                        
+                      {block:ShowAvatar}
+                            .about-image-margin{
+                                margin-left:1rem;}
+                      {/block:ShowAvatar}
+                        
+                      {block:IfFollowing}
+                            .following-margin{
+                                margin:1rem;}
+                      {/block:IfFollowing}
+                  
+                      {block:IfGroupMembers}
+                            .member-margin{
+                                margin:1rem;}
+                      {/block:IfGroupMembers} 
+                  
+                      {block:Twitter}
+                            div#tweets a{
+                                margin:1px;
+                                word-wrap:break-word;}
+                            #tweets > a:nth-child(n+{text:Tweets Limit}){
+                                display:none;} 
+                      {/block:Twitter} 
+                        
+                      .about-main-margin{
+                          margin-right:1.2rem;}
+                      .offcanvas-open{
+                          margin:auto 3rem;}
+                      .name-vertical-align-middle{
+                          margin-top:{text:Description Name Position};}    
+                {/block:HomePage}
+                  
+                {block:PermalinkPage}
+                      {block:PostNotes}
+                              ol.notes{
+                                  list-style-type:none;
+                                  margin:3px auto;}
+                              ol.notes li.note{
+                                  padding:10px;}
+                              ol.notes li.note img.avatar{
+                                  vertical-align:-4px;
+                                  margin-right:5px;
+                                  width:16px;
+                                  height:16px;}
+                              ol.notes li.note span.action{
+                                  font-weight:bold;}
+                              ol.notes li.note .answer_content{
+                                  font-weight:normal;}
+                              ol.notes li.note blockquote{
+                                  border-color:#eee;
+                                  padding:5px;
+                                  margin-right:3rem;}
+                      {/block:PostNotes} 
+                {/block:PermalinkPage}                                    
+
+                /* photoset post */                  
+                @media (min-width: 640px){
+                    .photoset-responsive{
+                        width:100%;
+                        max-width:700px;}
+                }
+              
+                @media (max-width: 639px){
+                    .photoset-responsive{
+                        width:250px;}
+                }
+                /* photoset post -end */
+                  
+                {CustomCSS}
+        　</style>
+     </head>
+    
+     <body>                                                        
+          <div class="off-canvas-wrapper">
+              <div class="off-canvas-content" data-off-canvas-content>
+                  {block:HomePage}
+                        <div class="grid-y medium-grid-frame homepage-height">
+                            <div class="cell shrink header medium-cell-block-container">
+                                <div class="header {block:ShowHeaderImage} header-image {/block:ShowHeaderImage}">
+                                    <div class="card-section">
+                                        <h1>
+                                           <a href="/">
+                                             {Title}
+                                           </a>
+                                        </h1>
+                                    </div><!-- card-section -end -->
+                                </div><!-- header -end -->
+                            </div><!-- cell shrink header medium-cell-block-container -end--> 
+                  {/block:HomePage}               
+                  
+                  {block:SearchPage}
+                        <div class="card-section">
+                            <h1>
+                               <a href="/">
+                                 {Title}
+                               </a>
+                            </h1>
+                        </div><!-- card-section -end -->
+                        <div class="border-box">
+                            <h2 class="text-center">
+                               {lang:Found SearchResultCount results for SearchQuery}
+                               {block:NoSearchResults}
+                                     {lang:Sorry no search results found}
+                               {/block:NoSearchResults}
+                            </h2><!-- text-center -end -->
+                        </div><!-- border-box -end -->
+                  {/block:SearchPage}
+
+                  {block:TagPage}
+                        <div class="card-section">
+                            <h1>
+                               <a href="/">
+                                 {Title}
+                               </a>
+                            </h1>
+                        </div><!-- card-section -end -->
+                        <div class="border-box">
+                            <h2 class="text-center">
+                               {lang:Showing posts tagged Tag}
+                            </h2><!-- text-center -end -->
+                        </div><!-- border-box -end -->    
+                  {/block:TagPage}
+                  
+                  {block:DayPage}
+                        <div class="card-section">
+                            <h1>
+                               <a href="/">
+                                 {Title}
+                               </a>
+                            </h1>
+                        </div><!-- card-section -end -->
+                        <div class="border-box">
+                            <h2 class="text-center">
+                               {block:IfDateYyMmDd}
+                                      {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
+                               {/block:IfDateYyMmDd}
+                               {block:IfNotDateYyMmDd}
+                                     {block:IfDateDdMmYy}
+                                           {DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}
+                                     {/block:IfDateDdMmYy}
+                               {/block:IfNotDateYyMmDd}
+                               {block:IfNotDateYyMmDd}
+                                     {block:IfNotDateDdMmYy}
+                                           {MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}
+                                     {/block:IfNotDateDdMmYy}
+                               {/block:IfNotDateYyMmDd}
+                            </h2><!-- text-center -end -->
+                        </div><!-- border-box -end -->    
+                  {/block:DayPage}                  
+                  
+                  {block:PermalinkPage}
+                        <div class="card-section">
+                            <h1>
+                               <a href="/">
+                                 {Title}
+                               </a>
+                            </h1>
+                        </div><!-- card-section -end -->   
+                  {/block:PermalinkPage}   
+                   
+                  {block:HomePage}
+                        <div class="cell medium-auto medium-cell-block-container">
+                            <div class="grid-x grid-padding-x">
+                                <div class="cell medium-2 medium-cell-block-y">
+                  {/block:HomePage} 
+                  
+                  {block:Posts}
+                        {block:HomePage}
+                              <a href="#" class="{block:IfHomeDateCover}label {/block:IfHomeDateCover}has-tip clear button secondary{block:NoteCount} alert{/block:NoteCount}" data-toggle="articleModal{PostId}" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" 
+                                {block:Text}title="{lang:Text post}"{/block:Text}
+                                {block:Photo}title="{lang:Photo post}"{/block:Photo}
+                                {block:Panorama}title="{lang:Photo post}"{/block:Panorama}
+                                {block:Photoset}title="{lang:Photo post}"{/block:Photoset}
+                                {block:Quote}title="{lang:Quote post}"{/block:Quote}
+                                {block:Link}title="{lang:Link post}"{/block:Link}
+                                {block:Audio}title="{lang:Audio post}"{/block:Audio}
+                                {block:Video} title="{lang:Video post}"{/block:Video}
+                                {block:Chat}title="{lang:Chat post}"{/block:Chat}
+                                {block:Answer}title="?????"{/block:Answer}>
+                                {block:IfGroupMembers}
+                                      {block:GroupMembers}
+                                            <img crass="radius" src="{PostAuthorPortraitURL-16}" alt="{PostAuthorName}">
+                                      {/block:GroupMembers}
+                                {/block:IfGroupMembers}
+                                {block:IfDateYyMmDd}
+                                      {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                {/block:IfDateYyMmDd}
+                                {block:IfNotDateYyMmDd}
+                                      {block:IfDateDdMmYy}
+                                            {DayOfMonthWithZero}-{MonthNumberWithZero}
+                                      {/block:IfDateDdMmYy}
+                                {/block:IfNotDateYyMmDd}
+                                {block:IfNotDateYyMmDd}
+                                      {block:IfNotDateDdMmYy}
+                                            {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                      {/block:IfNotDateDdMmYy}
+                                {/block:IfNotDateYyMmDd}
+                              </a><!-- has-tip clear button secondary -end -->
+
+                              <div class="{select:Home Article Size} reveal" id="articleModal{PostId}" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+                                  {block:IfPermalinkPage}
+                                        <a href="{Permalink}" data-tooltip aria-haspopup="true" class="has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{lang:Permalink}">
+                                　{/block:IfPermalinkPage}
+                                  　　　　　{TimeAgo}
+                                  {block:IfPermalinkPage}
+                                        </a><!-- has-tip border-bottom-none -end -->　　
+                                  {/block:IfPermalinkPage}
+                        {/block:HomePage}
+                                             
+                        <div class="card article">
+                            {block:Text}
+                                  {block:Title}
+                                        <div class="card-divider">
+                                            <h2>
+                                               {Title}
+                                            </h2>
+                                        </div><!-- card-divider -end -->
+                                  {/block:Title}
+                                  <div class="card-section"> 
+                                      {Body}
+                                  </div><!-- card-section -end -->
+                            {/block:Text}
+           
+                            {block:Photo}
+                                  <div class="card-image">
+                                      <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+                                  </div><!-- card-image -end -->
+                                  {block:HighRes}
+                                        <div class="card-section text-center">
+                                            {LinkOpenTag}
+                                                 {lang:Click for high-res photo}
+                                            {LinkCloseTag}
+                                        </div><!-- card-section text-center -end -->    
+                                  {/block:HighRes}
+                                  {block:Caption}
+                                        <div class="card-section">
+                                            {Caption}
+                                        </div><!-- card-section -end -->
+                                  {/block:Caption}
+                            {/block:Photo}  
+    
+                            {block:Panorama}
+                                  <div class="card-image">
+                                      <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+                                  </div><!-- card-image -end -->                       
+                                  {block:Caption}
+                                        <div class="card-section">
+                                            {Caption}
+                                        </div><!-- card-section -end -->                           
+                                  {/block:Caption}
+                            {/block:Panorama} 
+            
+                            {block:Photoset}
+                                  <div class="thumbnail float-center photoset-responsive">
+                                      {Photoset}
+                                  </div><!-- thumbnail float-center photoset-responsive -end --> 
+                                  {block:Caption}
+                                        <div class="card-section">
+                                            {Caption}
+                                        </div><!-- card-section -end -->                           
+                                  {/block:Caption}
+                            {/block:Photoset}
+                
+                            {block:Quote}
+                                  <div class="card-section">
+                                      <blockquote>
+                                                 <div class="{Length}">
+                                                     {Quote}
+                                                 </div>
+                                                 {block:Source}
+                                                       <p>
+                                                         {lang:Source}
+                                                         <cite>
+                                                              {Source}
+                                                          </cite>
+                                                       </p>
+                                                 {/block:Source}    
+                                      </blockquote>
+                                  </div><!-- card-section -end --> 
+                            {/block:Quote}    
+                
+                            {block:Link}
+                                  {block:Thumbnail}
+                                        <div class="card-image">
+                                            <img src="{Thumbnail-HighRes}" class="float-center thumbnail" alt="{lang:Link}">
+                                        </div><!-- card-image -end -->    
+                                        <div class="card-section text-center"> 
+                                            <a href="{Thumbnail-HighRes}">
+                                              {lang:Click for high-res photo}
+                                            </a>
+                                        </div><!-- card-section text-center -end -->
+                                  {/block:Thumbnail}
+                                  <div class="card-divider">
+                                      <div class="row">
+                                          <div class="small-12 large-expand columns">
+                                              <a href="{URL}" {Target}>
+                                                <h2>
+                                                   {name}
+                                                   {block:Host}
+                                                         <small>
+                                                               {Host}
+                                                         </small>
+                                                   {/block:Host}
+                                                </h2>
+                                              </a>
+                                          </div><!-- small-12 large-expand columns -end -->                                              
+                                          {block:Author}
+                                                <div class="small-12 large-expand columns">
+                                                    <h3>
+                                                       {Author}
+                                                    </h3>
+                                                </div><!-- small-12 large-expand columns -end -->
+                                          {/block:Author}
+                                      </div><!-- row -end -->                                          
+                                  </div><!-- card-divider -end --> 
+                                  {block:Excerpt}
+                                        <div class="card-section">  
+                                            {Excerpt}
+                                        </div><!-- card-section -end -->
+                                  {/block:Excerpt}
+                                  {block:Description}
+                                        <div class="card-section">
+                                            {Description}
+                                        </div><!-- card-section -end -->    
+                                  {/block:Description}      
+                            {/block:Link}        
+                
+                            {block:Chat}
+                                  {block:Title}
+                                        <div class="card-divider">
+                                            <h2>
+                                               {Title}
+                                            </h2>
+                                        </div><!-- card-divider -end -->    
+                                  {/block:Title}
+                                  {block:Lines}
+                                        <div class="card-section">
+                                            <dl>
+                                               <dt class="{Alt} user_{UserNumber}">
+                                                  {block:Label}
+                                                        {Label}
+                                                  {/block:Label}
+                                               </dt>
+                                               <dd>
+                                                 <small>
+                                                       {Line}
+                                                 </small>
+                                               </dd>
+                                            </dl>
+                                        </div><!-- card-section -end -->   
+                                  {/block:Lines}
+                            {/block:Chat}
+        
+                            {block:Video}
+                                  <div class="responsive-embed widescreen"{block:VideoThumbnail} style="background-image:url('{VideoThumbnailURL}');background-size:cover;"{/block:VideoThumbnail}>
+                                      {Video-700}
+                                  </div><!-- responsive-embed widescreen -end -->
+                                  <div class="card-section text-center">
+                                      {PlayCountWithLabel}
+                                  </div><!-- card-section text-center -end -->
+                                  {block:Caption}
+                                        <div class="card-section">
+                                            {Caption}
+                                         </div><!-- card-section -end -->            
+                                  {/block:Caption}      
+                            {/block:Video}
+    
+                            {block:Audio}
+                                  {block:AudioEmbed}
+                                        <div class="responsive-embed widescreen">
+                                            {AudioEmbed-640}
+                                        </div><!-- responsive-embed widescreen -end -->
+                                  {/block:AudioEmbed} 
+                                  {block:AudioPlayer}
+                                        <div class="float-center">
+                                            {AudioPlayerBlack}
+                                        </div><!-- float-center -end -->
+                                  {/block:AudioPlayer}
+                                                   
+                                  {block:AlbumArt}
+                                        <div class="card-image">
+                                            <img src="{AlbumArtURL}" alt="{AlbumArtURL}" class="thumbnail">
+                                        </div><!-- card-image -end -->    
+                                  {/block:AlbumArt}
+                                  {block:ExternalAudio}
+                                        <div class="text-center">
+                                            <a href="{ExternalAudioURL}">
+                                              {lang:Download this track}
+                                            </a>
+                                        </div><!-- text-center -end -->
+                                  {/block:ExternalAudio}
+                                  <div class="card-section">
+                                      {block:TrackName}
+                                            <h2>
+                                               {TrackName}
+                                            </h2>
+                                      {/block:TrackName}
+                                      {block:Album}
+                                            <h3>
+                                               {Album}
+                                            </h3>
+                                      {/block:Album}
+                                      {block:Artist}
+                                            <h4>
+                                               {Artist}
+                                            </h4>
+                                      {/block:Artist}
+                                      <div class="text-center">
+                                          <span class="label">
+                                               {PlayCountWithLabel}
+                                          </span><!-- label -end -->
+                                      </div><!-- text-center -end -->
+                                  </div><!-- card-section -end -->
+                                  {block:Caption}
+                                        <div class="card-section">
+                                            {Caption}
+                                        </div><!-- card-section -end -->            
+                                  {/block:Caption}      
+                            {/block:Audio}  
+                                                
+                            {block:Answer}
+                                  <div class="media-object">
+                                      <div class="media-object-section">
+                                          <div class="thumbnail">
+                                              <img crass="radius" src="{AskerPortraitURL-40}" alt="{PostAuthorName}">
+                                          </div><!-- thumbnail -end -->
+                                      </div><!-- media-object-section -end -->
+                                      <div class="media-object-section">
+                                          <h2>
+                                             {Asker}
+                                          </h2>
+                                          <p>
+                                            {Question}
+                                          </p>
+                                          {block:Answerer}
+                                                <div class="media-object">
+                                                    <div class="media-object-section">
+                                                        <div class="thumbnail">
+                                                            <img crass="radius" src="{AnswererPortraitURL-40}" alt="{name}">
+                                                        </div><!-- thumbnail -end -->
+                                                    </div>
+                                                    <div class="media-object-section">
+                                                        <h3>
+                                                           {lang:Replies}
+                                                        </h3>
+                                                        <p>
+                                                          {Answer}
+                                                        </p>
+                                                    </div><!-- media-object-section -end -->
+                                                </div><!-- media-object -end -->
+                                          {/block:Answerer}
+                                          <div class="media-object">
+                                              <div class="media-object-section">
+                                                  <div class="thumbnail">
+                                                      <img crass="radius" src="{PortraitURL-40}" alt="{name}">
+                                                  </div><!-- thumbnail -end -->
+                                              </div><!-- media-object-section -end -->
+                                              <div class="media-object-section">
+                                                  <h3>
+                                                     {lang:Replies}
+                                                  </h3>
+                                                  <p>
+                                                    {Replies}
+                                                  </p>
+                                              </div><!-- media-object-section -end -->
+                                          </div><!-- media-object -end -->
+                                      </div><!-- media-object-section -end-->
+                                  </div><!-- media-object -end -->   
+                            {/block:Answer}<!-- Post Main Content -end -->
+                                             
+                            {block:ContentSource}
+                                  <div class="card-section">
+                                      <ul class="no-bullet">
+                                         <li>
+                                            {lang:Source}     
+                                            <a href="{SourceURL}">
+                                              {block:SourceLogo}
+                                                    <img crass="radius" src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}">
+                                              {/block:SourceLogo}
+                                              {block:NoSourceLogo}
+                                                    {SourceTitle}
+                                              {/block:NoSourceLogo}
+                                            </a>       
+                                         </li>
+                                      </ul><!-- no-bullet -end --> 
+                                  </div><!-- card-section -end -->    
+                            {/block:ContentSource}
+                                
+                            {block:RebloggedFrom}
+                                  <div class="card-section">
+                                      <ul class="no-bullet">
+                                         <li>
+                                            {lang:Reblogged from}
+                                            <a href="{ReblogParentURL}" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="{ReblogParentTitle}">
+                                              <img src="{ReblogParentPortraitURL-16}" alt="{ReblogParentName}">
+                                              {ReblogParentName}
+                                            </a><!-- has-tip -end -->
+                                         </li>
+                                         <li>
+                                            {lang:Source}
+                                            <a href="{ReblogRootURL}" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="{ReblogRootTitle}">
+                                              <img crass="radius" src="{ReblogRootPortraitURL-16}" alt="{ReblogRootName}">
+                                              {ReblogRootName}
+                                            </a><!-- has-tip -end -->
+                                         </li>
+                                      </ul><!-- no-bullet -end -->
+                                  </div><!-- card-section -end -->              
+                            {/block:RebloggedFrom}
+                                             
+                            {block:HasTags}
+                                  <div class="card-section">
+                                      {block:Tags}
+                                            {block:IfPermalinkPage}
+                                                  <a href="{TagURL}#tagged" class="font-bold">
+                                            {block:IfPermalinkPage} 
+                                            {block:IfNotPermalinkPage}
+                                                  <span class="font-bold">
+                                            {/block:IfNotPermalinkPage}      
+                                            &#35;
+                                            <span class="show-for-sr">
+                                                 {lang:tags}
+                                            </span><!-- show-for-sr -end -->
+                                            {Tag}
+                                            {block:IfNotPermalinkPage} 
+                                                  </span><!-- font-bold -end -->   
+                                            {/block:IfNotPermalinkPage}
+                                            {block:IfPermalinkPage}  
+                                                  </a><!-- font-bold -end -->
+                                            {/block:IfPermalinkPage}      
+                                      {/block:Tags}
+                                  </div><!-- card-section -end -->
+                            {/block:HasTags}
+                                             
+                            {block:Date}
+                                  <div class="card-section">
+                                      <nav aria-label="article meta" role="meta">
+                                          <ul class="breadcrumbs breadcrumbs-responsive">
+                                             {block:PermalinkPage}
+                                                   <li>   
+                                                      <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}#daypage" data-tooltip aria-haspopup="true" class="has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{lang:Show all posts made on this day}">
+                                                        {block:IfDateYyMmDd}
+                                                              {Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}
+                                                        {/block:IfDateYyMmDd}
+                                                        {block:IfNotDateYyMmDd}
+                                                              {block:IfDateDdMmYy}
+                                                                    {DayOfMonthWithZero}-{MonthNumberWithZero}-{Year}
+                                                              {/block:IfDateDdMmYy}
+                                                        {/block:IfNotDateYyMmDd}
+                                                        {block:IfNotDateYyMmDd}
+                                                              {block:IfNotDateDdMmYy}
+                                                                    {MonthNumberWithZero}-{DayOfMonthWithZero}-{Year}
+                                                              {/block:IfNotDateDdMmYy}
+                                                        {/block:IfNotDateYyMmDd}    
+                                                      </a><!-- has-tip border-bottom-none -end -->
+                                                   </li>                     
+                                             {/block:PermalinkPage}
+                                             
+                                             {block:Submission}
+                                                   <li>
+                                                      <a href="{SubmitterURL}">
+                                                        <img crass="radius" src="{SubmitterPortraitURL-16}" alt="{Submitter}">
+                                                      </a> 
+                                                   </li>
+                                             {/block:Submission}
+                                             
+                                             {block:IfGroupMembers}
+                                                   <li>
+                                                      {block:GroupMembers}
+                                                            <a href="{PostAuthorURL}" data-tooltip aria-haspopup="true" class="has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{PostAuthorName}">
+                                                              <img crass="radius" src="{PostAuthorPortraitURL-16}" alt="{PostAuthorName}">
+                                                            </a><!-- has-tip border-bottom-none -end -->
+                                                      {/block:GroupMembers}
+                                                   </li>
+                                             {/block:IfGroupMembers}
+                                             <li>
+                                                 <div class="float-left">
+                                                    {likeButton size="14"}
+                                                 </div><!-- float-left -end -->
+                                             </li>
+                                             <li>
+                                                <div class="float-left"> 
+                                                    {ReblogButton size="14"}
+                                                </div><!-- float-right -end -->
+                                             </li>
+                                             <li>
+                                                <a href="{Permalink}/embed">
+                                                  {lang:Embed}
+                                                </a>
+                                             </li>
+                                             {block:IfDisqusComment}
+                                                   {block:IndexPage}
+                                                         <li>
+                                                            <a href="{Permalink}#disqus-comment" data-toggle="disqus-comment">
+                                                              {lang:Comment}
+                                                            </a>
+                                                         </li>
+                                                   {/block:IndexPage}     
+                                             {/block:IfDisqusComment}
+                                             <li>
+                                                <form>
+                                                     <input value="{ShortURL}" class="border-style-none">
+                                                </form>
+                                             </li>
+                                          </ul><!-- breadcrumbs -end -->
+                                          {text:Article Free Area}
+                                      </nav>
+                                  </div><!-- card-section -end -->                                                  
+                            {/block:Date}
+                        </div><!-- card article -->
+                        
+                        {block:IndexPage}
+                               {block:NoteCount}
+                                     <div class="float-right">
+                                         {block:IfPermalinkPage} 
+                                               <a href="{Permalink}#reaction" class="clear tiny button alert white-space-normal">
+                                         {/block:IfPermalinkPage}       
+                                         {NoteCountWithLabel}
+                                         {block:IfPermalinkPage} 
+                                               </a><!-- clear tiny button alert white-space-normal -end -->
+                                         {/block:IfPermalinkPage}
+                                    </div><!--   float-right -end -->    
+                              {/block:NoteCount}
+                        {/block:IndexPage}
+                        
+                        {block:HomePage}                        
+                                  <button class="close-button" data-close aria-label="Close reveal" type="button">
+                                         <span aria-hidden="true">
+                                              &times;
+                                         </span>
+                                  </button><!-- close-button -end -->
+                              </div><!-- reveal -end-->
+                        {/block:HomePage}                          
+
+                        {block:PermalinkPage}
+                              {block:Date}
+                                    {block:PostNotes}
+                                          <div class="card">
+                                              <h3 id="reaction">
+                                                 {lang:This post has NoteCount notes}
+                                              </h3>
+                                              <div class="card-section">
+                                                  {PostNotes}
+                                              </div><!-- card-section -end -->
+                                          </div><!-- card -end -->
+                                    {/block:PostNotes}
+                              
+                                    {block:IfDisqusComment} 
+                                          <span class="subheader" data-toggle="disqus" id="disqus-comment">
+                                               {lang:View comments for this post}
+                                          </span><!-- subheader -end -->
+                                          <div class="is-hidden" id="disqus" data-toggler="is-hidden">
+                                              <div class="card">
+                                                  <div class="card-divider">
+                                                      <h3>
+                                                         {lang:Comment}
+                                                      </h3><!-- card-divider -end -->
+                                                  </div><!-- card-header -end -->
+                                                  <div class="card-section">
+                                                      <div id="disqus_thread"></div>
+                                                      <script>
+                                                             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                                             var disqus_shortname = '{text:Disqus Shortname}'; // Required - Enter shortname in Tumblr Theme Options
+                                                             var disqus_url = '{Permalink}'; 
+                                                             /* * * DON'T EDIT BELOW THIS LINE * * */
+                                                             (function() {var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);}  )();
+                                                      </script>
+                                                      <noscript>
+                                                               Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                                                      </noscript>
+                                                      {lang:Blog comments powered by Disqus 2}
+                                                  </div><!-- card-section -end -->
+                                              </div><!-- card -end -->
+                                          </div><!-- is-hidden -end -->      
+                                    {/block:IfDisqusComment}
+                              {/block:Date}
+                        {/block:PermalinkPage}
+                  {/block:Posts}
+                  
+                  {block:IfHomePagiNation}
+                        {block:HomePage}
+                              <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                                 {block:PreviousPage}
+                                       <li class="pagination-previous disabled">
+                                          <a href="{PreviousPage}" aria-label="Previous">
+                                            {lang:Previous page}
+                                          </a>
+                                       </li><!-- pagination-previous disabled -end -->
+                                 {/block:PreviousPage}
+                                 {block:NextPage}
+                                       <li class="pagination-next">
+                                          <a href="{NextPage}" aria-label="Next">
+                                            {lang:Next page}
+                                          </a>
+                                       </li><!-- pagination-next -end -->
+                                 {/block:NextPage}
+                              </ul><!-- pagination tex-center -end -->
+                        {/block:HomePage}
+                  {/block:IfHomePagiNation}
+               
+                  {block:SearchPage}
+                        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                           {block:PreviousPage}
+                                 <li class="pagination-previous disabled">
+                                    <a href="{PreviousPage}" aria-label="Previous">
+                                      {lang:Previous page}
+                                    </a>
+                                 </li><!-- pagination-previous disabled -end -->
+                           {/block:PreviousPage}
+                           
+                           {block:JumpPagination length="5"}
+                                 {block:CurrentPage}
+                                       <li class="current">
+                                          <a href="{URL}">
+                                            {PageNumber}
+                                          </a>
+                                       </li><!-- current -end -->
+                                 {/block:CurrentPage}
+                                 {block:JumpPage}
+                                       <li>
+                                          <a href="{URL}">
+                                            {PageNumber}
+                                          </a>
+                                       </li>
+                                 {/block:JumpPage}
+                           {/block:JumpPagination}
+                                 
+                           {block:NextPage}
+                                 <li class="pagination-next">
+                                    <a href="{NextPage}" aria-label="Next">
+                                      {lang:Next page}
+                                    </a>
+                                 </li><!-- pagination-next -end -->
+                           {/block:NextPage}
+                        </ul><!-- pagination tex-center -end -->
+                  {/block:SearchPage}
+                           
+                  {block:TagPage}
+                        <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                           {block:PreviousPage}
+                                 <li class="pagination-previous disabled">
+                                    <a href="{PreviousPage}" aria-label="Previous">
+                                      {lang:Previous page}
+                                    </a>
+                                 </li><!-- pagination-previous disabled -end -->
+                           {/block:PreviousPage}
+                           
+                           {block:JumpPagination length="5"}
+                                 {block:CurrentPage}
+                                       <li class="current">
+                                          <a href="{URL}">
+                                            {PageNumber}
+                                          </a>
+                                       </li><!-- current -end -->
+                                 {/block:CurrentPage}
+                                 {block:JumpPage}
+                                       <li>
+                                          <a href="{URL}">
+                                            {PageNumber}
+                                          </a>
+                                       </li>
+                                 {/block:JumpPage}
+                           {/block:JumpPagination}
+                           
+                           {block:NextPage}
+                                 <li class="pagination-next">
+                                    <a href="{NextPage}" aria-label="Next">
+                                      {lang:Next page}
+                                    </a>
+                                 </li><!-- pagination-next -end -->
+                           {/block:NextPage}
+                        </ul><!-- pagination tex-center -end -->
+                  {/block:TagPage}
+                  
+                  {block:DayPagination}
+                        <ul class="pagination text-center" role="navigation" aria-label="DayPagination">     
+                           {block:PreviousDayPage}
+                                 <li class="pagination-previous disabled">
+                                    <a href="{PreviousDayPage}" aria-label="Previous">
+                                      {block:IfDateYyMmDd}
+                                            {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                      {/block:IfDateYyMmDd}
+                                      {block:IfNotDateYyMmDd}
+                                            {block:IfDateDdMmYy}
+                                                  {DayOfMonthWithZero}-{MonthNumberWithZero}
+                                            {/block:IfDateDdMmYy}
+                                      {/block:IfNotDateYyMmDd}
+                                      {block:IfNotDateYyMmDd}
+                                            {block:IfNotDateDdMmYy}
+                                                  {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                            {/block:IfNotDateDdMmYy}
+                                      {/block:IfNotDateYyMmDd}
+                                    </a>
+                                 </li>
+                           {/block:PreviousDayPage}
+                           {block:NextDayPage}
+                                 <li class="pagination-next">
+                                    <a href="{NextDayPage}" aria-label="Next">
+                                      {block:IfDateYyMmDd}
+                                            {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                      {/block:IfDateYyMmDd}
+                                      {block:IfNotDateYyMmDd}
+                                            {block:IfDateDdMmYy}
+                                                  {DayOfMonthWithZero}-{MonthNumberWithZero}
+                                            {/block:IfDateDdMmYy}
+                                      {/block:IfNotDateYyMmDd}
+                                      {block:IfNotDateYyMmDd}
+                                            {block:IfNotDateDdMmYy}
+                                                  {MonthNumberWithZero}-{DayOfMonthWithZero}
+                                            {/block:IfNotDateDdMmYy}
+                                      {/block:IfNotDateYyMmDd}
+                                    </a>
+                                 </li><!-- pagination-next -end -->
+                           {/block:NextDayPage}
+                        </ul><!-- pagination text-center -end --> 
+                  {/block:DayPagination}
+               
+                  {block:PermalinkPagination}
+                        <ul class="pagination text-center">
+                           {block:PreviousPost}
+                                 <li class="pagination-previous">
+                                    <a href="{PreviousPost}" aria-label="Previous">
+                                      {lang:To the past}
+                                    </a>
+                                 </li><!-- pagination-previous -end -->
+                           {/block:PreviousPost}
+                           {block:NextPost}
+                                 <li class="pagination-next">
+                                    <a href="{NextPost}" aria-label="Next">
+                                      {lang:To the future}
+                                    </a>
+                                 </li><!-- pagination-next -end -->
+                           {/block:NextPost}
+                        </ul><!-- pagination text-center -end -->
+                  {/block:PermalinkPagination}
+
+                  {block:HomePage}               
+                                </div><!-- cell medium-2 medium-cell-block-y -end --> 
+                                <div class="cell medium-10 medium-cell-block-y">  
+                                    {block:IfSlideImage}
+                                          <div class="grid-x">
+                                    {/block:IfSlideImage}
+                                    <div class="media-object stack-for-small">
+                                        {block:ShowAvatar}
+                                              <div class="media-object-section about-image-margin">
+                                                  <div class="thumbnail {AvatarShape}">
+                                                      <img src="{PortraitURL-128}" alt="{name}" class="{AvatarShape}">
+                                                  </div><!-- thumbnail -end -->
+                                              </div><!-- media-object-section about-image-margin -end -->
+                                        {/block:ShowAvatar} 
+                                        <div class="media-object-section cell medium-8 about-main-margin">
+                                            <h2 class="name-vertical-align-middle">
+                                               {name}
+                                            </h2><!-- name-vertical-align-middle -end -->
+                                        </div><!-- media-object-section cell medium-8 about-main-margin -end -->
+                                         
+                                        {block:IfSlideImage}
+                                              <div class="grid-x grid-margin-x">
+                                                  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                                                      <div class="orbit-wrapper">
+                                                          <div class="orbit-controls">
+                                                              <button class="orbit-previous">
+                                                                     <span class="show-for-sr">
+                                                                          Previous Slide
+                                                                     </span><!-- show-for-sr -end -->
+                                                                          &#9664;&#xFE0E;
+                                                              </button><!-- orbit-previous -end -->
+                                                              <button class="orbit-next">
+                                                                     <span class="show-for-sr">
+                                                                          Next Slide
+                                                                     </span><!-- show-for-sr -end -->
+                                                                     &#9654;&#xFE0E;
+                                                              </button><!-- orbit-next -end -->
+                                                          </div><!-- orbit-controls -end -->
+                                                          <ul class="orbit-container">
+                                                             <li class="is-active orbit-slide">
+                                                                <figure class="orbit-figure">
+                                                                       <img class="orbit-image" src="{image:Slide Image 1}" alt="Space">
+                                                                       {block:IfSlideImageCaption}
+                                                                             <figcaption class="orbit-caption">
+                                                                                        {text:Slide Image 1 Caption}
+                                                                             </figcaption><!-- orbit-caption -end -->
+                                                                       {/block:IfSlideImageCaption}      
+                                                                </figure><!-- orbit-figure -end -->
+                                                             </li><!-- is-active orbit-slide -end -->
+                                                             <li class="orbit-slide">
+                                                                <figure class="orbit-figure">
+                                                                       <img class="orbit-image" src="{image:Slide Image 2}" alt="Space">
+                                                                       {block:IfSlideImageCaption}
+                                                                             <figcaption class="orbit-caption">
+                                                                                        {text:Slide Image 2 Caption}
+                                                                             </figcaption><!-- orbit-caption -end -->
+                                                                       {/block:IfSlideImageCaption}
+                                                                </figure><!-- orbit-figure -end -->
+                                                             </li><!-- orbit-slide -end -->
+                                                             <li class="orbit-slide">
+                                                                <figure class="orbit-figure">
+                                                                       <img class="orbit-image" src="{image:Slide Image 3}" alt="Space">
+                                                                       {block:IfSlideImageCaption}
+                                                                             <figcaption class="orbit-caption">
+                                                                                        {text:Slide Image 3 Caption}
+                                                                             </figcaption><!-- orbit-caption -end -->
+                                                                       {/block:IfSlideImageCaption}      
+                                                                </figure><!-- orbit-figure -end -->
+                                                             </li><!-- is-active orbit-slide -end -->                                                             
+                                                          </ul><!-- orbit-container -end -->
+                                                      </div><!-- orbit-wrapper -end -->
+                                                      <nav class="orbit-bullets">
+                                                         <button class="is-active" data-slide="0">
+                                                                <span class="show-for-sr">
+                                                                     First slide details.
+                                                                </span><!-- show-for-sr -end -->
+                                                                <span class="show-for-sr">
+                                                                     Current Slide
+                                                                </span><!-- show-for-sr -end -->
+                                                         </button>
+                                                         <button data-slide="1">
+                                                                <span class="show-for-sr">
+                                                                     Second slide details.
+                                                                </span><!-- show-for-sr -end -->
+                                                             
+                                                         </button>
+                                                         <button data-slide="2">
+                                                                <span class="show-for-sr">
+                                                                     Third slide details.
+                                                                </span><!-- show-for-sr -end -->
+                                                         </button>
+                                                      </nav><!-- orbit-bullets -end -->
+                                                  </div><!-- orbit -end -->
+                                              </div><!-- grid-x grid-margin-x-end -->
+                                        {/block:IfSlideImage}
+                                    </div><!-- media-object stack-for-small -end-->
+                                    {block:IfSlideImage}
+                                          </div><!-- grid-x -end -->
+                                    {/block:IfSlideImage}  
+                                    
+                                    {text:Home Free Area}
+                                   
+                                    {block:IfFollowing}
+                                          <a href="#" data-toggle="offCanvasBottom" class="clear small button primary offcanvas-open">
+                                            {lang:Following}
+                                          </a><!-- clear small button primary offcanvas-open -end -->
+                                    {/block:IfFollowing}                                    
+                                    
+                                    {block:IfLikedPosts}
+                                          <a href="#" data-toggle="offCanvasLeft" class="clear small button primary offcanvas-open">
+                                            {lang:Liked posts}
+                                          </a><!-- clear small button primary offcanvas-open -end -->
+                                    {/block:IfLikedPosts}
+                                    
+                                    {block:IfTweets}
+                                          <a href="#" data-toggle="offCanvasRight" class="clear small button primary offcanvas-open">
+                                            {lang:tweets}
+                                          </a><!-- clear small button primary offcanvas-open -end -->
+                                    {/block:IfTweets}
+                                    
+                                    {block:ShowDescription}
+                                          <div class="card-section text-left">
+                                              {block:Description}
+                                                    {Description}
+                                              {/block:Description}
+                                          </div><!-- card-section text-left -end -->
+                                    {/block:ShowDescription}
+                                    
+                                    {block:IfGroupMembers}
+                                          {block:GroupMembers}
+                                                <div class="card-section">
+                                                    <dl>
+                                                       <dt>
+                                                          {lang:Group members}
+                                                       </dt>         
+                                                       <dd>
+                                                          {block:GroupMember}
+                                                                <a href="{GroupMemberURL}" data-tooltip aria-haspopup="true" class="member-margin has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{GroupMemberTitle}">
+                                                                  <img class="radius" src="{GroupMemberPortraitURL-24}" alt="{GroupMemberName}">
+                                                                </a><!-- member-margin -end -->
+                                                          {/block:GroupMember}
+                                                       </dd>
+                                                    </dl>
+                                                </div><!-- card-section -end -->
+                                          {/block:GroupMembers}
+                                    {/block:IfGroupMembers}  
+                                </div><!-- cell medium-10 medium-cell-block-y -end -->
+                            </div><!-- !-- grid-x grid-padding-x -end -->                      
+                        <div class="cell shrink footer">   
+                  {/block:HomePage}                                
+                  
+                  <div class="grid-x grid-margin-x align-center">
+                      <ul class="menu">
+                         <li>
+                            {block:IfNavigation}
+                                  <a href="#" data-toggle="offCanvasTop">
+                                     {lang:Navigate}
+                                  </a>
+                            {/block:IfNavigation} 
+                            {block:IfNotNavigation}
+                                  <a href="https://www.tumblr.com/themes/by/hana-mignon">
+                                    &#128120;
+                                    <span class="show-for-sr">
+                                         {lang:Install this theme}
+                                    </span><!-- show-for-sr -end -->
+                                  </a>
+                            {/block:IfNotNavigation}
+                         </li>
+                         <li class="menu-text">
+                            &copy;
+                            <span class="show-for-sr">
+                                 Copyright
+                            </span><!-- show-for-sr -end -->
+                            {name}
+                         </li>
+                      </ul><!-- menu -end -->
+                  </div><!-- grid-x grid-margin-x -end -->
+                  {block:HomePage}
+                        </div><!-- cell shrink footer -end -->      
+                        </div><!-- grid-y medium-grid-frame -end -->
+                  {/block:HomePage} 
+              </div><!-- off-canvascontent -end -->
+              
+              {block:IfNavigation}
+                    <div class="off-canvas position-top" id="offCanvasTop" data-off-canvas>
+                        <button class="close-button" style="top:3rem!important;" aria-label="Close menu" type="button" data-close>
+                               <span aria-hidden="true">
+                                    &times;
+                               </span>
+                        </button><!-- close-button -end -->
+                        <div class="top-bar off-canvas-x-top">
+                            <div class="top-bar-left">
+                                <ul class="menu align-center">
+                                   <li>
+                                      <a href="{RSS}">
+                                        {lang:Feed}
+                                      </a>
+                                   </li>
+                                   <li>
+                                      <a href="{Archive}">
+                                        {lang:Archive}
+                                      </a>
+                                   </li>  
+                                   {block:IfPages}
+                                         {block:HasPages}
+                                               {block:Pages}
+                                                     <li>
+                                                        <a href="{URL}" class="white-space-normal">
+                                                          {Label}
+                                                        </a>
+                                                     </li>
+                                               {/block:Pages}
+                                         {/block:HasPages}
+                                   {/block:IfPages}
+                                   {block:AskEnabled}
+                                         <li>
+                                            <a href="/ask" class="white-space-normal">
+                                              {AskLabel}
+                                            </a>
+                                         </li>
+                                   {/block:AskEnabled}
+                                   {block:SubmissionsEnabled}
+                                         <li>
+                                            <a href="/submit" class="white-space-normal">
+                                              {SubmitLabel}    
+                                            </a>
+                                         </li>
+                                   {/block:SubmissionsEnabled} 
+                                </ul><!-- menu align-center -end -->  
+                                {block:IfSearch}
+                                      <form action="/search" method="get">
+                                           <ul class="menu align-center">
+                                              <li>
+                                                 <input type="text" name="q" placeholder="{lang:Search keywords}">
+                                              </li>
+                                              <li>
+                                                 <button type="button" class="button tiny">
+                                                        {lang:Search}
+                                                 </button><!-- button tiny -end -->
+                                              </li>
+                                           </ul><!-- menu align-center -end --> 
+                                      </form>
+                                {/block:IfSearch}
+                            </div><!-- top-bar-left -end -->   
+                        </div><!-- top-bar off-canvas-y-top -ned -->
+                        <div class="text-center">
+                            <a href="https://www.tumblr.com/themes/by/hana-mignon" class="clear secondary button tiny">
+                              &#128120;
+                              {lang:Install this theme}
+                            </a><!-- clear secondary button tiny -end -->
+                        </div><!-- text-center -end -->
+                    </div><!-- off-canvas position-top -end -->
+              {/block:IfNavigation}
+
+              {block:HomePage}              
+                    {block:IfFollowing}
+                          <div class="off-canvas position-bottom" id="offCanvasBottom" data-off-canvas>
+                              <button class="close-button" style="top:3.5rem!important;" aria-label="Close menu" type="button" data-close>
+                                     <span aria-hidden="true">
+                                          &times;
+                                     </span>
+                              </button><!-- close-button -end -->
+                              <div class="card">
+                                  <div class="card-section off-canvas-x-top">
+                                      <h3>
+                                         {lang:Following}
+                                      </h3>
+                                  </div><!-- card-section off-canvas-x-top -end -->
+                                  {block:Following}
+                                        {block:Followed}
+                                              <a href="{FollowedURL}" data-tooltip aria-haspopup="true" class="following-margin has-tip border-bottom-none" data-disable-hover="false" tabindex="1" title="{FollowedName}">
+                                                <img src="{FollowedPortraitURL-16}" alt="{FollowedName}" class="radius">
+                                              </a><!-- member-margin has-tip border-bottom-none -end -->
+                                        {/block:Followed}
+                                  {/block:Following} 
+                              </div><!-- card -end -->  
+                          </div><!-- off-canvas position- -end -->
+                    {/block:IfFollowing}              
+
+                    {block:IfLikedPosts}
+                          <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+                              <button class="close-button" style="top:3.5rem!important;" aria-label="Close menu" type="button" data-close>
+                                     <span aria-hidden="true">
+                                          &times;
+                                     </span>
+                              </button><!-- close-button -end -->
+                              <div class="card">
+                                  <div class="card-section off-canvas-x-top">
+                                      <h3>
+                                         {lang:Liked posts}
+                                      </h3>
+                                      <a href="https://www.tumblr.com/liked/by/{Name}">
+                                        {lang:Load more posts}
+                                      </a>
+                                  </div><!-- card-section off-canvas-x-top -end -->
+                                  {block:Likes}
+                                        <div class="card-section">
+                                            {Likes limit="6"}
+                                        </div><!-- card-section -end -->
+                                  {/block:Likes}
+                              </div><!-- card -end -->  
+                          </div><!-- off-canvas position-left -end --> 
+                    {/block:IfLikedPosts}
+              
+                    {block:IfTweets}
+                          <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
+                              <button class="close-button" style="top:3.5rem!important;" aria-label="Close menu" type="button" data-close>
+                                     <span aria-hidden="true">
+                                          &times;
+                                     </span>
+                              </button><!-- close-button -end -->
+                              {block:Twitter}
+                                    <div class="card"> 
+                                        <div class="card-section off-canvas-x-top">
+                                            <h3>  
+                                               <a href="http://twitter.com/{TwitterUsername}">
+                                                 &#64;
+                                                 {TwitterUsername}
+                                               </a>
+                                            </h3>
+                                        </div><!-- card-section off-canvas-x-top -end -->
+                                        <div class="card-section">
+                                            <div id="tweets"></div>
+                                        </div><!-- card-section-end -->
+                                    </div><!-- card -end -->
+                                    <script>
+                                           function recent_tweets(data){for (i=0; i<data.length; i++){document.getElementById("tweets").innerHTML = document.getElementById("tweets").innerHTML +' <a href="https://twitter.com/{TwitterUsername}/status/' + (data[i].id_str ? data[i].id_str : data[i].id) + '" class="card"><div class="card-section">' + data[i].text + '</div></a>';}document.getElementById("twitter").style.display ='block';}
+                                    </script>
+                              {/block:Twitter}
+                              <!-- Put this at the bottom of the page -->
+                              {block:Twitter}
+                                    <script src="/tweets.js"></script>
+                              {/block:Twitter}
+                          </div><!-- off-canvas position-left -end --> 
+                    {/block:IfTweets} 
+              {/block:HomePage}
+          </div><!-- off-canvas-wrapper -end -->           
+          
+          <!-- script -->
+     　　 <script src="https://static.tumblr.com/smfekjv/sWtoutyl1/jquery.js"></script>
+     　　 <script src="https://static.tumblr.com/smfekjv/tLToutylq/foundation.min.js"></script>
+          <script>
+                 $(document).foundation();
+          </script>
+
+          {block:IfGoogleAnalyticsID}
+                <script>
+                       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                       })
+                       (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                       ga('create', '{text:Google Analytics ID}', 'tumblr.com');
+                       ga('send', 'pageview');
+                </script>
+          {/block:IfGoogleAnalyticsID} 
+          <!-- script -end -->         
+      </body><!-- pt-3 -end -->
+</html>
