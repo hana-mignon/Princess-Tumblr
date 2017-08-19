@@ -46,7 +46,7 @@
 ### :white_check_mark: Install certified version
 :point_right: You can click the "set" of the link destination, please click on the name of the blog you want to set.
 
-[Certified　Theme](https://www.tumblr.com/theme/40808)
+[Certified Theme](https://www.tumblr.com/theme/40808)
 
 ## License
 
