@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html lang="{block:Japanese}ja{/block:Japanese}{block:English}en{/block:English}{block:German}de{/block:German}{block:French}fr{/block:French}{block:Italian}it{/block:Italian}{block:Turkish}tr{/block:Turkish}{block:Spanish}es{/block:Spanish}{block:Russian}ru{/block:Russian}{block:Polish}pl{/block:Polish}{block:Portuguese}pt-br{/block:Portuguese}{block:Portuguese}pt-pt{/block:Portuguese}{block:Dutch}nl{/block:Dutch}{block:Korean}kr{/block:Korean}">
-<!-- "Princess" - Version 1.0.2 - Tumblr Themes. The MIT License. (c) hana. https://github.com/hana-mignon -->
+<!-- "Princess" - Version 1.1.0 - Tumblr Themes. The MIT License. (c) hana. https://github.com/hana-mignon -->
      <head>
         　<meta charset="utf-8">
         　{block:Ifkeywords}
@@ -41,18 +41,23 @@
                 <meta name="image:Slide Image 2" content="" />
                 <meta name="image:Slide Image 3" content="" />
                 <meta name="text:keywords" content="Tumblr,Princess" />
-                <meta name='text:Tweets Limit' content='30' />
                 <meta name="text:Home Page Height" content='min-height:150vh;' /> 
-                <meta name='text:Disqus Shortname' content='' />
-                <meta name="text:Google Analytics ID" content='' />
                 <meta name="text:Description Name Position" content='40px' />
+                <meta name='text:Tweets Limit' content='30' />
                 <meta name="text:Home Free Area" content='' />
                 <meta name="text:Article Free Area" content='' />
                 <meta name="text:Slide Image 1 Caption" content="" />
                 <meta name="text:Slide Image 2 Caption" content="" />
                 <meta name="text:Slide Image 3 Caption" content="" />
+                <meta name="text:Camera" content="Camera" />
+                <meta name="text:Aperture" content="Aperture" /> 
+                <meta name="text:Exposure" content="Exposure" />
+                <meta name="text:FocalLength" content="FocalLength" />  
+                <meta name='text:Disqus Shortname' content='' />
+                <meta name="text:Google Analytics ID" content='' />                   
                 <meta name="if:keywords" content="0" />
                 <meta name="if:Ogp" content="0" /> 
+                <meta name="if:Body Narrow" content="0" /> 
                 <meta name="if:Navigation" content="1" />
                 <meta name="if:Search" content="1" />
                 <meta name="if:Pages" content="1" />
@@ -64,10 +69,14 @@
                 <meta name="if:Date DdMmYy" content="0" />
                 <meta name="if:Home Date Cover" content="0" />
                 <meta name="if:Home PagiNation" content="1" />
-                <meta name="if:Permalink Page" content="1" />
+                <meta name="if:Photosetclassic" content="1" />
+                <meta name="if:Like Reblog Button" content="1" />
+                <meta name="if:PostNotes" content="1" />
+                <meta name="if:Exif" content="0" />
                 <meta name="if:Slide Image" content="0" />
                 <meta name="if:Slide Image Caption" content="0" />
                 <meta name="if:Disqus Comment" content="0" />
+                <meta name="if:Permalink Page" content="1" />
                 <meta name="select:Home Article Size" content="small" title="Small" />
                 <meta name="select:Home Article Size" content="large" title="Large" />
                 <meta name="select:Home Article Size" content="full" title="Full" />
@@ -82,15 +91,14 @@
         　<style>
                 h1 a{
                     color:{TitleColor};}
-                     
+                    
                 {block:HomePage}
                       .homepage-height{
                           {text:Home Page Height}}
                       .header{
                           margin-bottom:1rem;
                           padding-top:2rem;
-                          height:50vh;
-                          background-color:{AccentColor};}  
+                          height:50vh;}  
                       h1 a{
                           text-shadow:#ffffff 2px 2px 4px;}
                       h1 a:active{
@@ -133,26 +141,28 @@
                 {/block:HomePage}
                   
                 {block:PermalinkPage}
-                      {block:PostNotes}
-                              ol.notes{
-                                  list-style-type:none;
-                                  margin:3px auto;}
-                              ol.notes li.note{
-                                  padding:10px;}
-                              ol.notes li.note img.avatar{
-                                  vertical-align:-4px;
-                                  margin-right:5px;
-                                  width:16px;
-                                  height:16px;}
-                              ol.notes li.note span.action{
-                                  font-weight:bold;}
-                              ol.notes li.note .answer_content{
-                                  font-weight:normal;}
-                              ol.notes li.note blockquote{
-                                  border-color:#eee;
-                                  padding:5px;
-                                  margin-right:3rem;}
-                      {/block:PostNotes} 
+                      {block:IfPostNotes}
+                            {block:PostNotes}
+                                  ol.notes{
+                                      list-style-type:none;
+                                      margin:3px auto;}
+                                  ol.notes li.note{
+                                      padding:10px;}
+                                  ol.notes li.note img.avatar{
+                                      vertical-align:-4px;
+                                      margin-right:5px;
+                                      width:16px;
+                                      height:16px;}
+                                  ol.notes li.note span.action{
+                                      font-weight:bold;}
+                                  ol.notes li.note .answer_content{
+                                      font-weight:normal;}
+                                  ol.notes li.note blockquote{
+                                      border-color:#eee;
+                                      padding:5px;
+                                      margin-right:3rem;}
+                             {/block:PostNotes} 
+                      {/block:IfPostNotes}                      
                 {/block:PermalinkPage}                                    
 
                 /* photoset post */                  
@@ -175,6 +185,11 @@
      <body>                                                        
           <div class="off-canvas-wrapper">
               <div class="off-canvas-content" data-off-canvas-content>
+                  {block:IfBodyNarrow}
+                        <div class="grid-x grid-padding-x align-center"> 
+                            <div class="medium-8 cell">
+                  {/block:IfBodyNarrow}
+                  
                   {block:HomePage}
                         <div class="grid-y medium-grid-frame homepage-height">
                             <div class="cell shrink header medium-cell-block-container">
@@ -268,7 +283,7 @@
                   
                   {block:Posts}
                         {block:HomePage}
-                              <a href="#" class="{block:IfHomeDateCover}label {/block:IfHomeDateCover}has-tip clear button secondary{block:NoteCount} alert{/block:NoteCount}" data-toggle="articleModal{PostId}" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" 
+                              <a href="#" class="{block:IfHomeDateCover}label {/block:IfHomeDateCover}has-tip clear button secondary{block:IfPostNotes}{block:NoteCount} alert{/block:NoteCount}{/block:IfPostNotes}" data-toggle="articleModal{PostId}" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" 
                                 {block:Text}title="{lang:Text post}"{/block:Text}
                                 {block:Photo}title="{lang:Photo post}"{/block:Photo}
                                 {block:Panorama}title="{lang:Photo post}"{/block:Panorama}
@@ -335,6 +350,62 @@
                                             {LinkCloseTag}
                                         </div><!-- card-section text-center -end -->    
                                   {/block:HighRes}
+                                  {block:IfExif}
+                                        {block:Exif}
+                                              <div class="grid-container fluid">
+                                                  <div class="grid-x grid-margin-x">
+                                                      {block:Camera}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Camera}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Camera}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Camera}
+                                                      {block:Aperture}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Aperture}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Aperture}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Aperture}
+                                                      {block:Exposure}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Exposure}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Exposure}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Exposure}
+                                                      {block:FocalLength}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:FocalLength}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {FocalLength}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:FocalLength}
+                                                  </div><!-- grid-x grid-margin-x -end -->
+                                              </div><!-- grid-container fluid -end -->
+                                        {/block:Exif}
+                                  {/block:IfExif}                        
                                   {block:Caption}
                                         <div class="card-section">
                                             {Caption}
@@ -345,7 +416,63 @@
                             {block:Panorama}
                                   <div class="card-image">
                                       <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
-                                  </div><!-- card-image -end -->                       
+                                  </div><!-- card-image -end -->   
+                                  {block:IfExif}
+                                        {block:Exif}
+                                              <div class="grid-container fluid">
+                                                  <div class="grid-x grid-margin-x">
+                                                      {block:Camera}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Camera}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Camera}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Camera}
+                                                      {block:Aperture}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Aperture}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Aperture}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Aperture}
+                                                      {block:Exposure}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:Exposure}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {Exposure}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:Exposure}
+                                                      {block:FocalLength}
+                                                            <div class="cell medium-4">
+                                                                <dl>
+                                                                   <dt>
+                                                                      {text:FocalLength}
+                                                                   </dt>
+                                                                   <dd class="text-center">
+                                                                      {FocalLength}
+                                                                   </dd><!-- text-center -end -->
+                                                                </dl>
+                                                            </div><!-- cell medium-4 -end -->
+                                                      {/block:FocalLength}
+                                                  </div><!-- grid-x grid-margin-x -end -->
+                                              </div><!-- grid-container fluid -end -->
+                                        {/block:Exif}
+                                  {/block:IfExif}                                  
                                   {block:Caption}
                                         <div class="card-section">
                                             {Caption}
@@ -354,9 +481,53 @@
                             {/block:Panorama} 
             
                             {block:Photoset}
-                                  <div class="thumbnail float-center photoset-responsive">
-                                      {Photoset}
-                                  </div><!-- thumbnail float-center photoset-responsive -end --> 
+                                  {block:IfPhotosetClassic}
+                                        {block:Photos}
+                                              <div class="card-image float-center">
+                                                  <img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" />
+                                              </div><!-- card-image float-center -end -->
+                                              {block:Caption}
+                                                    <div class="card-section">
+                                                        {Caption}
+                                                    </div><!-- card-section -end -->
+                                              {/block:Caption}
+                                              {block:IfExif}
+                                                    {block:Exif}
+                                                          <div class="card-section">
+                                                              <ul class="menu simple">
+                                                                 {block:Camera}
+                                                                       <li class="white-space-normal">
+                                                                          {Camera}
+                                                                       </li><!--  white-space-normal -end -->
+                                                                 {/block:Camera}
+                                                                 {block:Aperture}
+                                                                       <li class="white-space-normal">
+                                                                          {Aperture}
+                                                                       </li><!-- white-space-normal -end -->
+                                                                 {/block:Aperture}
+                                                                 {block:Exposure}
+                                                                       <li class="white-space-normal">
+                                                                          {Exposure}
+                                                                       </li><!-- white-space-normal -end -->
+                                                                 {/block:Exposure}
+                                                                 {block:FocalLength}
+                                                                       <li class="white-space-normal">
+                                                                          {FocalLength}
+                                                                       </li><!-- white-space-normal -end -->
+                                                                 {/block:FocalLength}
+                                                              </ul><!-- menu simple -end -->
+                                                          </div><!-- card-section -end -->
+                                                    {/block:Exif}
+                                              {/block:IfExif} 
+                                        {/block:Photos} 
+                                  {/block:IfPhotosetClassic}
+        
+                                  {block:IfNotPhotosetClassic}
+                                        <div class="thumbnail float-center photoset-responsive">
+                                            {Photoset}
+                                        </div><!-- thumbnail float-center photoset-responsive -end -->
+                                  {/block:IfNotPhotosetClassic}
+                                  
                                   {block:Caption}
                                         <div class="card-section">
                                             {Caption}
@@ -675,16 +846,18 @@
                                                       {/block:GroupMembers}
                                                    </li>
                                              {/block:IfGroupMembers}
-                                             <li>
-                                                 <div class="float-left">
-                                                    {likeButton size="14"}
-                                                 </div><!-- float-left -end -->
-                                             </li>
-                                             <li>
-                                                <div class="float-left"> 
-                                                    {ReblogButton size="14"}
-                                                </div><!-- float-right -end -->
-                                             </li>
+                                             {block:IfLikeReblogButton}
+                                                   <li>
+                                                      <div class="float-left">
+                                                          {likeButton size="14"}
+                                                      </div><!-- float-left -end -->
+                                                   </li>
+                                                   <li>
+                                                      <div class="float-left"> 
+                                                          {ReblogButton size="14"}
+                                                      </div><!-- float-right -end -->
+                                                   </li>
+                                             {/block:IfLikeReblogButton}
                                              <li>
                                                 <a href="{Permalink}/embed">
                                                   {lang:Embed}
@@ -707,22 +880,26 @@
                                           </ul><!-- breadcrumbs -end -->
                                           {text:Article Free Area}
                                       </nav>
-                                  </div><!-- card-section -end -->                                                  
+                                  </div><!-- card-section -end --> 
                             {/block:Date}
                         </div><!-- card article -->
                         
                         {block:IndexPage}
-                               {block:NoteCount}
-                                     <div class="float-right">
-                                         {block:IfPermalinkPage} 
-                                               <a href="{Permalink}#reaction" class="clear tiny button alert white-space-normal">
-                                         {/block:IfPermalinkPage}       
-                                         {NoteCountWithLabel}
-                                         {block:IfPermalinkPage} 
-                                               </a><!-- clear tiny button alert white-space-normal -end -->
-                                         {/block:IfPermalinkPage}
-                                    </div><!--   float-right -end -->    
-                              {/block:NoteCount}
+                              {block:IfPostNotes}
+                                    {block:NoteCount}
+                                          <div class="float-right">
+                                              {block:IfPermalinkPage} 
+                                                    <a href="{Permalink}#reaction" class="clear tiny button alert white-space-normal">
+                                              {/block:IfPermalinkPage}
+                                              
+                                              {NoteCountWithLabel}
+                                              
+                                              {block:IfPermalinkPage} 
+                                                    </a><!-- clear tiny button alert white-space-normal -end -->
+                                              {/block:IfPermalinkPage}
+                                          </div><!-- float-right -end -->    
+                                    {/block:NoteCount}
+                              {/block:IfPostNotes}
                         {/block:IndexPage}
                         
                         {block:HomePage}                        
@@ -736,16 +913,18 @@
 
                         {block:PermalinkPage}
                               {block:Date}
-                                    {block:PostNotes}
-                                          <div class="card">
-                                              <h3 id="reaction">
-                                                 {lang:This post has NoteCount notes}
-                                              </h3>
-                                              <div class="card-section">
-                                                  {PostNotes}
-                                              </div><!-- card-section -end -->
-                                          </div><!-- card -end -->
-                                    {/block:PostNotes}
+                                    {block:IfPostNotes}
+                                          {block:PostNotes}
+                                                <div class="card">
+                                                    <h3 id="reaction">
+                                                       {lang:This post has NoteCount notes}
+                                                    </h3>
+                                                    <div class="card-section">
+                                                        {PostNotes}
+                                                    </div><!-- card-section -end -->
+                                                </div><!-- card -end -->
+                                          {/block:PostNotes}
+                                    {/block:IfPostNotes}
                               
                                     {block:IfDisqusComment} 
                                           <span class="subheader" data-toggle="disqus" id="disqus-comment">
@@ -938,10 +1117,12 @@
 
                   {block:HomePage}               
                                 </div><!-- cell medium-2 medium-cell-block-y -end --> 
-                                <div class="cell medium-10 medium-cell-block-y">  
-                                    {block:IfSlideImage}
-                                          <div class="grid-x">
-                                    {/block:IfSlideImage}
+                                <div class="cell medium-10 medium-cell-block-y"> 
+                                    {block:IfNotBodyNarrow}
+                                          {block:IfSlideImage}
+                                                <div class="grid-x">
+                                          {/block:IfSlideImage}
+                                    {/block:IfNotBodyNarrow}      
                                     <div class="media-object stack-for-small">
                                         {block:ShowAvatar}
                                               <div class="media-object-section about-image-margin">
@@ -955,86 +1136,89 @@
                                                {name}
                                             </h2><!-- name-vertical-align-middle -end -->
                                         </div><!-- media-object-section cell medium-8 about-main-margin -end -->
-                                         
-                                        {block:IfSlideImage}
-                                              <div class="grid-x grid-margin-x">
-                                                  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-                                                      <div class="orbit-wrapper">
-                                                          <div class="orbit-controls">
-                                                              <button class="orbit-previous">
-                                                                     <span class="show-for-sr">
-                                                                          Previous Slide
-                                                                     </span><!-- show-for-sr -end -->
-                                                                          &#9664;&#xFE0E;
-                                                              </button><!-- orbit-previous -end -->
-                                                              <button class="orbit-next">
-                                                                     <span class="show-for-sr">
-                                                                          Next Slide
-                                                                     </span><!-- show-for-sr -end -->
-                                                                     &#9654;&#xFE0E;
-                                                              </button><!-- orbit-next -end -->
-                                                          </div><!-- orbit-controls -end -->
-                                                          <ul class="orbit-container">
-                                                             <li class="is-active orbit-slide">
-                                                                <figure class="orbit-figure">
-                                                                       <img class="orbit-image" src="{image:Slide Image 1}" alt="Space">
-                                                                       {block:IfSlideImageCaption}
-                                                                             <figcaption class="orbit-caption">
-                                                                                        {text:Slide Image 1 Caption}
-                                                                             </figcaption><!-- orbit-caption -end -->
-                                                                       {/block:IfSlideImageCaption}      
-                                                                </figure><!-- orbit-figure -end -->
-                                                             </li><!-- is-active orbit-slide -end -->
-                                                             <li class="orbit-slide">
-                                                                <figure class="orbit-figure">
-                                                                       <img class="orbit-image" src="{image:Slide Image 2}" alt="Space">
-                                                                       {block:IfSlideImageCaption}
-                                                                             <figcaption class="orbit-caption">
-                                                                                        {text:Slide Image 2 Caption}
-                                                                             </figcaption><!-- orbit-caption -end -->
-                                                                       {/block:IfSlideImageCaption}
-                                                                </figure><!-- orbit-figure -end -->
-                                                             </li><!-- orbit-slide -end -->
-                                                             <li class="orbit-slide">
-                                                                <figure class="orbit-figure">
-                                                                       <img class="orbit-image" src="{image:Slide Image 3}" alt="Space">
-                                                                       {block:IfSlideImageCaption}
-                                                                             <figcaption class="orbit-caption">
-                                                                                        {text:Slide Image 3 Caption}
-                                                                             </figcaption><!-- orbit-caption -end -->
-                                                                       {/block:IfSlideImageCaption}      
-                                                                </figure><!-- orbit-figure -end -->
-                                                             </li><!-- is-active orbit-slide -end -->                                                             
-                                                          </ul><!-- orbit-container -end -->
-                                                      </div><!-- orbit-wrapper -end -->
-                                                      <nav class="orbit-bullets">
-                                                         <button class="is-active" data-slide="0">
-                                                                <span class="show-for-sr">
-                                                                     First slide details.
-                                                                </span><!-- show-for-sr -end -->
-                                                                <span class="show-for-sr">
-                                                                     Current Slide
-                                                                </span><!-- show-for-sr -end -->
-                                                         </button>
-                                                         <button data-slide="1">
-                                                                <span class="show-for-sr">
-                                                                     Second slide details.
-                                                                </span><!-- show-for-sr -end -->
-                                                             
-                                                         </button>
-                                                         <button data-slide="2">
-                                                                <span class="show-for-sr">
-                                                                     Third slide details.
-                                                                </span><!-- show-for-sr -end -->
-                                                         </button>
-                                                      </nav><!-- orbit-bullets -end -->
-                                                  </div><!-- orbit -end -->
-                                              </div><!-- grid-x grid-margin-x-end -->
-                                        {/block:IfSlideImage}
+                                        
+                                        {block:IfNotBodyNarrow}
+                                              {block:IfSlideImage}
+                                                    <div class="grid-x grid-margin-x">
+                                                        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                                                            <div class="orbit-wrapper">
+                                                                <div class="orbit-controls">
+                                                                    <button class="orbit-previous">
+                                                                           <span class="show-for-sr">
+                                                                                Previous Slide
+                                                                           </span><!-- show-for-sr -end -->
+                                                                           &#9664;&#xFE0E;
+                                                                    </button><!-- orbit-previous -end -->
+                                                                    <button class="orbit-next">
+                                                                           <span class="show-for-sr">
+                                                                                Next Slide
+                                                                           </span><!-- show-for-sr -end -->
+                                                                           &#9654;&#xFE0E;
+                                                                    </button><!-- orbit-next -end -->
+                                                                </div><!-- orbit-controls -end -->
+                                                                <ul class="orbit-container">
+                                                                   <li class="is-active orbit-slide">
+                                                                      <figure class="orbit-figure">
+                                                                             <img class="orbit-image" src="{image:Slide Image 1}" alt="Space">
+                                                                             {block:IfSlideImageCaption}
+                                                                                   <figcaption class="orbit-caption">
+                                                                                              {text:Slide Image 1 Caption}
+                                                                                   </figcaption><!-- orbit-caption -end -->
+                                                                             {/block:IfSlideImageCaption}      
+                                                                      </figure><!-- orbit-figure -end -->
+                                                                   </li><!-- is-active orbit-slide -end -->
+                                                                   <li class="orbit-slide">
+                                                                      <figure class="orbit-figure">
+                                                                             <img class="orbit-image" src="{image:Slide Image 2}" alt="Space">
+                                                                             {block:IfSlideImageCaption}
+                                                                                   <figcaption class="orbit-caption">
+                                                                                              {text:Slide Image 2 Caption}
+                                                                                   </figcaption><!-- orbit-caption -end -->
+                                                                             {/block:IfSlideImageCaption}
+                                                                      </figure><!-- orbit-figure -end -->
+                                                                   </li><!-- orbit-slide -end -->
+                                                                   <li class="orbit-slide">
+                                                                      <figure class="orbit-figure">
+                                                                             <img class="orbit-image" src="{image:Slide Image 3}" alt="Space">
+                                                                             {block:IfSlideImageCaption}
+                                                                                   <figcaption class="orbit-caption">
+                                                                                              {text:Slide Image 3 Caption}
+                                                                                   </figcaption><!-- orbit-caption -end -->
+                                                                             {/block:IfSlideImageCaption}      
+                                                                      </figure><!-- orbit-figure -end -->
+                                                                   </li><!-- is-active orbit-slide -end -->                                                             
+                                                                </ul><!-- orbit-container -end -->
+                                                            </div><!-- orbit-wrapper -end -->
+                                                            <nav class="orbit-bullets">
+                                                                <button class="is-active" data-slide="0">
+                                                                       <span class="show-for-sr">
+                                                                            First slide details.
+                                                                       </span><!-- show-for-sr -end -->
+                                                                       <span class="show-for-sr">
+                                                                            Current Slide
+                                                                       </span><!-- show-for-sr -end -->
+                                                                </button>
+                                                                <button data-slide="1">
+                                                                       <span class="show-for-sr">
+                                                                            Second slide details.
+                                                                       </span><!-- show-for-sr -end -->
+                                                                </button>
+                                                                <button data-slide="2">
+                                                                       <span class="show-for-sr">
+                                                                            Third slide details.
+                                                                       </span><!-- show-for-sr -end -->
+                                                                </button>
+                                                            </nav><!-- orbit-bullets -end -->
+                                                        </div><!-- orbit -end -->
+                                                    </div><!-- grid-x grid-margin-x-end -->
+                                              {/block:IfSlideImage}
+                                        {/block:IfNotBodyNarrow}
                                     </div><!-- media-object stack-for-small -end-->
-                                    {block:IfSlideImage}
-                                          </div><!-- grid-x -end -->
-                                    {/block:IfSlideImage}  
+                                    {block:IfNotBodyNarrow}
+                                          {block:IfSlideImage}
+                                               </div><!-- grid-x -end -->
+                                          {/block:IfSlideImage}  
+                                    {/block:IfNotBodyNarrow}
                                     
                                     {text:Home Free Area}
                                    
@@ -1096,7 +1280,7 @@
                                   </a>
                             {/block:IfNavigation} 
                             {block:IfNotNavigation}
-                                  <a href="https://www.tumblr.com/themes/by/hana-mignon">
+                                  <a href="https://www.tumblr.com/theme/40808">
                                     &#128120;
                                     <span class="show-for-sr">
                                          {lang:Install this theme}
@@ -1117,6 +1301,10 @@
                         </div><!-- cell shrink footer -end -->      
                         </div><!-- grid-y medium-grid-frame -end -->
                   {/block:HomePage} 
+                  {block:IfBodyNarrow} 
+                            </div><!-- cell medium-8 -end -->
+                        </div><!-- grid-x grid-padding-x align-center -end -->     
+                  {/block:IfBodyNarrow}              
               </div><!-- off-canvascontent -end -->
               
               {block:IfNavigation}
@@ -1182,7 +1370,7 @@
                             </div><!-- top-bar-left -end -->   
                         </div><!-- top-bar off-canvas-y-top -ned -->
                         <div class="text-center">
-                            <a href="https://www.tumblr.com/themes/by/hana-mignon" class="clear secondary button tiny">
+                            <a href="https://www.tumblr.com/theme/40808" class="clear secondary button tiny">
                               &#128120;
                               {lang:Install this theme}
                             </a><!-- clear secondary button tiny -end -->
@@ -1294,4 +1482,4 @@
           {/block:IfGoogleAnalyticsID} 
           <!-- script -end -->         
       </body>
-</html>
+</html> 
